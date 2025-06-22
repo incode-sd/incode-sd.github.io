@@ -6,11 +6,91 @@
 
         <link rel="stylesheet" href="assets/css/styles.css">
         <link rel="shortcut icon" href="https://ik.imagekit.io/u2ywkf4qjwo/personal/Round_picture_wntdLWniF.png" type="image/x-icon">
-	    <link rel="icon" href="https://ik.imagekit.io/u2ywkf4qjwo/personal/Round_picture_wntdLWniF.png" type="image/x-icon">
+        <link rel="icon" href="https://ik.imagekit.io/u2ywkf4qjwo/personal/Round_picture_wntdLWniF.png" type="image/x-icon">
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-
+        
         <title>Sourav Dutta</title>
+
+        <style>
+            /* Basic styling for project details - these can be moved to styles.css */
+            .projects__grid {
+                display: grid;
+                gap: 2rem; /* Spacing between project cards */
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+                max-width: 1024px;
+                margin: 0 auto; /* Center the grid */
+            }
+
+            .project-card {
+                background-color: #f9f9f9;
+                border-radius: 10px;
+                padding: 1.5rem;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .project-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            }
+
+            .project-card__title {
+                font-size: 1.8rem;
+                color: #3730a3; /* Matches h1, h2, h3 in original style */
+                margin-bottom: 0.5rem;
+            }
+
+            .project-card__company {
+                font-size: 1.2rem;
+                color: #555;
+                margin-bottom: 0.25rem;
+                font-weight: 600;
+            }
+
+            .project-card__duration {
+                font-size: 0.95rem;
+                color: #777;
+                margin-bottom: 1rem;
+            }
+
+            .project-card__description {
+                font-size: 1rem;
+                line-height: 1.6;
+                color: #333;
+                margin-bottom: 1rem;
+            }
+
+            .project-card__impacts {
+                list-style: none; /* Remove default bullet */
+                padding-left: 0;
+            }
+
+            .project-card__impacts li {
+                font-size: 1rem;
+                color: #444;
+                margin-bottom: 0.5rem;
+                position: relative;
+                padding-left: 1.5rem;
+            }
+
+            .project-card__impacts li:before {
+                content: '\2022'; /* Unicode for a solid bullet point */
+                color: #3730a3; /* Match theme color */
+                font-size: 1.2rem;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            /* Adjust for smaller screens */
+            @media screen and (max-width: 768px) {
+                .projects__grid {
+                    grid-template-columns: 1fr; /* Stack projects on small screens */
+                    padding: 0 1rem; /* Add some horizontal padding */
+                }
+            }
+        </style>
     </head>
     <body>
         <!--===== HEADER =====-->
@@ -47,7 +127,6 @@
 
                 <div class="home__social">
                     <a href="https://www.linkedin.com/in/souravduttaa/" target="blank" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <!-- <a href="" class="home__social-icon"><i class='bx bxl-behance' ></i></a> -->
                     <a href="https://github.com/incode-sd" target="blank" class="home__social-icon"><i class='bx bxl-github' ></i></a>
                 </div>
 
@@ -67,36 +146,144 @@
                     
                     <div>
                         <h2 class="about__subtitle">Hi There,</h2>
-                        <p class="about__text">                            
+                        <p class="about__text">            
                             I am Sourav currently working as a Software Engineer in a MNC based out in New Delhi, India.
-                            I have overall 5 yrs of Full Stack experience and 1 yr of Internship experience with Software Development.
+                            I have overall 6+ years of Full Stack experience and 1 yr of Internship experience with Software Development.
                             I am a self-motivated professional who likes to solve problems. I highly believe in empathy during team work.
-                            I am extremely motivated to constantly develop my skills and grow professionally. Proficient with node.js and react.
+                            I am extremely motivated to constantly develop my skills and grow professionally. Proficient with Node.js and React.
                             I have also achieved Microsoft certification for MCSA: Web Apps and MCSD: App Builder. 
-                            I am an aspiring learner in web3 ecosystem. Always striving to bring the best out of myself. 
+                            I am an aspiring learner in Web3 ecosystem. Always striving to bring the best out of myself. 
                         </p>           
-                    </div>                                   
+                    </div>                       
                 </div>
             </section>
 
             <!--===== SKILLS =====-->
             <section class="skills section" id="skills">
                 <h2 class="section-title">Skills</h2>
-
-                <div class="skills__container" style="max-width: 1024px; margin: auto;">
-                    <div>              
-                        <img src="https://ik.imagekit.io/u2ywkf4qjwo/Portfolio/skill-dev_oRidLyjzn.png" alt="" class="skills__img">
+                <div class="skills__container" style="max-width: 1024px; margin: auto; text-align: center;">
+                    <!-- Updated with skill categories based on resume -->
+                    <div class="projects__grid">
+                        <div class="project-card">
+                            <h3 class="project-card__title"><i class='bx bx-desktop' ></i> Frontend</h3>
+                            <ul class="project-card__impacts">
+                                <li>React.js, Next.js, Redux.js</li>
+                                <li>TypeScript, JavaScript</li>
+                                <li>HTML, CSS</li>
+                            </ul>
+                        </div>
+                        <div class="project-card">
+                            <h3 class="project-card__title"><i class='bx bx-server' ></i> Backend</h3>
+                            <ul class="project-card__impacts">
+                                <li>Node.js, Express.js</li>
+                                <li>REST APIs</li>
+                                <li>SQL, MongoDB, MySQL</li>
+                            </ul>
+                        </div>
+                        <div class="project-card">
+                            <h3 class="project-card__title"><i class='bx bx-cloud' ></i> Cloud & DevOps</h3>
+                            <ul class="project-card__impacts">
+                                <li>AWS (Lambda, S3, EC2, ECS, DynamoDB)</li>
+                                <li>Docker, Linux</li>
+                            </ul>
+                        </div>
+                        <div class="project-card">
+                            <h3 class="project-card__title"><i class='bx bx-bug' ></i> Testing</h3>
+                            <ul class="project-card__impacts">
+                                <li>Jest, React Testing Library (RTL)</li>
+                                <li>Postman</li>
+                            </ul>
+                        </div>
+                        <div class="project-card">
+                            <h3 class="project-card__title"><i class='bx bx-code-alt' ></i> Development Tools</h3>
+                            <ul class="project-card__impacts">
+                                <li>Git, GitHub</li>
+                                <li>SonarQube, Design Patterns</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!--===== WORK EXPERIENCE=====-->
+            <!--===== WORK PROJECTS =====-->
             <section class="work section" id="work">
-                <h2 class="section-title">Work</h2>
+                <h2 class="section-title">Projects</h2>
 
-                <div class="work__container" style="max-width: 1024px; margin: auto;">
-                    <div>              
-                        <img src="https://ik.imagekit.io/u2ywkf4qjwo/Portfolio/experience-dev-final_EKL51PmWQ.png" alt="" class="skills__img">
+                <div class="projects__grid">
+                    <!-- Project 1: AI-driven learning recommendation system -->
+                    <div class="project-card">
+                        <h3 class="project-card__title">AI-driven Learning Recommendation System</h3>
+                        <p class="project-card__company">Magic Edtech - SSE - Module Lead</p>
+                        <p class="project-card__duration">Jun 2024 - Present</p>
+                        <p class="project-card__description">Designed and developed an AI-driven learning recommendation system to provide personalized learning paths. Addressed challenges in user data quality and skill definition for accurate learning recommendations. Led UI/UX development, ensuring seamless interaction with Gen-AI suggestions. Integrated AWS services like S3 and Lambda for scalable data processing. Conducted developer onboarding and training sessions.</p>
+                        <ul class="project-card__impacts">
+                            <li>Increased user engagement by 30%</li>
+                            <li>Increased course completion rates by 25%</li>
+                            <li>Improved skill assessment accuracy by 20%</li>
+                        </ul>
+                    </div>
+
+                    <!-- Project 2: Project Bulk Upload Tool -->
+                    <div class="project-card">
+                        <h3 class="project-card__title">Project Bulk Upload Tool</h3>
+                        <p class="project-card__company">Magic Edtech - Senior Software Engineer</p>
+                        <p class="project-card__duration">May 2022 - Jun 2024</p>
+                        <p class="project-card__description">Architected and optimized a bulk data upload tool to enhance productivity and reduce errors. Designed and implemented a high-performance React frontend and a scalable Node.js API. Utilized Redux for robust state management and Node.js libraries for file parsing.</p>
+                        <ul class="project-card__impacts">
+                            <li>Reduced upload times by 75%</li>
+                            <li>Reduced manual effort by 80%</li>
+                            <li>Reduced data errors by 90%</li>
+                        </ul>
+                    </div>
+
+                    <!-- Project 3: Content Management Software -->
+                    <div class="project-card">
+                        <h3 class="project-card__title">Content Management Software</h3>
+                        <p class="project-card__company">Magic Edtech - Senior Software Engineer</p>
+                        <p class="project-card__duration">May 2022 - Jun 2024</p>
+                        <p class="project-card__description">Developed a centralized CMS for article creation, management, and publishing. Implemented dynamic content visualizations and improved user journey with UX designers.</p>
+                        <ul class="project-card__impacts">
+                            <li>Reduced content publishing time by 60%</li>
+                            <li>Increased content velocity by 40%</li>
+                            <li>Improved brand consistency by 80%</li>
+                        </ul>
+                    </div>
+
+                    <!-- Project 4: AI-Based Inventory Management -->
+                    <div class="project-card">
+                        <h3 class="project-card__title">AI-Based Inventory Management</h3>
+                        <p class="project-card__company">RSG Media - Software Engineer</p>
+                        <p class="project-card__duration">Jun 2019 - May 2022</p>
+                        <p class="project-card__description">Developed AI-powered inventory management software to predict demand and automate procurement. Implemented real-time data updates using WebSockets and designed scalable API endpoints. Created dynamic dashboards using Chart.js.</p>
+                        <ul class="project-card__impacts">
+                            <li>Reduced inventory costs by 30%</li>
+                            <li>Improved team productivity and customer satisfaction</li>
+                        </ul>
+                    </div>
+
+                    <!-- Project 5: Advertising Optimization Tool -->
+                    <div class="project-card">
+                        <h3 class="project-card__title">Advertising Optimization Tool</h3>
+                        <p class="project-card__company">RSG Media - Software Engineer</p>
+                        <p class="project-card__duration">Jun 2019 - May 2022</p>
+                        <p class="project-card__description">Engineered a digital advertising optimization tool to enhance campaign performance and ROI. Integrated advanced advertising models and built secure authentication mechanisms. Used React-Query for efficient data fetching and D3.js for interactive visualizations.</p>
+                        <ul class="project-card__impacts">
+                            <li>Increased customer ROI by 35%</li>
+                            <li>Reduced ad spend waste by 40%</li>
+                            <li>Improved conversion rates by 30%</li>
+                        </ul>
+                    </div>
+
+                    <!-- Project 6: Data Warehousing Software as a Service -->
+                    <div class="project-card">
+                        <h3 class="project-card__title">Data Warehousing Software as a Service</h3>
+                        <p class="project-card__company">Milliman Inc - Software Engineer (Intern)</p>
+                        <p class="project-card__duration">Jun 2018 - Jun 2019</p>
+                        <p class="project-card__description">Developed a real-time monitoring dashboard for ETL pipeline management. Integrated Databricks and Snowflake SDKs to enhance data pipeline efficiency.</p>
+                        <ul class="project-card__impacts">
+                            <li>Improved data accessibility, governance, and business agility</li>
+                            <li>Led to better collaboration and data-driven decisions</li>
+                        </ul>
                     </div>
                 </div>
             </section>
@@ -118,8 +305,8 @@
         </main>
 
         <!--===== FOOTER =====-->
-        <footer class="footer">         
-            <p>&#169; 2025 copyright all right reserved</p>
+        <footer class="footer">            
+            <p>&#169; 2021 copyright all right reserved</p>
         </footer>
 
         <!--===== SCROLL REVEAL =====-->
